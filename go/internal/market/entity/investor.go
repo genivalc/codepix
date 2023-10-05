@@ -17,12 +17,12 @@ func (i *Investor) AddAssetPosition(assetPosition *InvestorAssetPosition) {
 	i.AssetPosition = append(i.AssetPosition, assetPosition)
 }
 
-func (i *Investor) UpgradeAssetPosition(assetID string, qthShares int) {
+func (i *Investor) UpdateAssetPosition(assetID string, qtdShares int) {
 	assetPosition := i.GetAssetPosition(assetID)
 	if assetPosition == nil {
-		i.AssetPosition = append(i.AssetPosition, NewInvestorAssetPosition(assetID, qthShares))
+		i.AssetPosition = append(i.AssetPosition, NewInvestorAssetPosition(assetID, qtdShares))
 	} else {
-		assetPosition.Shares += qthShares
+		assetPosition.Shares += qtdShares
 	}
 }
 
