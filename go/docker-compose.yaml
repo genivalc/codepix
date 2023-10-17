@@ -79,3 +79,5 @@ services:
       - db
 
       # docker-compose up -d
+      # docker-compose ps
+      # docker exec -it go-app-1 bash
