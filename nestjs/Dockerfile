@@ -1,9 +1,9 @@
-FROM node:18-slim 
+FROM node:20-slim 
 # debian
 
 RUN apt update -y && \
     apt install -y procps && \
-    npm install -g @nestjs/cli@9.4.2
+    npm install -g @nestjs/cli@10.0.0
 
 WORKDIR /home/node/app
 
